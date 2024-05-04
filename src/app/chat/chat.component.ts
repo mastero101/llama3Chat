@@ -41,7 +41,7 @@ export class ChatComponent {
 
       const messageObject = { message: this.newMessage };
       this.newMessage = '';
-      axios.post('http://132.145.206.61:5600/sendMessage', messageObject)
+      axios.post('https://backend-5ac1.onrender.com/sendMessage', messageObject)
         .then((response: any) => {
           if (response.data && response.data[0] && response.data[0].response) {
             const receivedMessage = response.data[0].response.response;
