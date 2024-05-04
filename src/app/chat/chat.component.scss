@@ -1,0 +1,46 @@
+.chat-container {
+  max-width: 600px; /* Limitar el ancho máximo del chat */
+  margin: 0 auto; /* Centrar el chat en la página */
+  padding-top: 5%;
+}
+
+.sent-message {
+  text-align: right;
+  background-color: #DCF8C6;
+  padding: 0.5em 1em; /* Espaciado interno */
+  border-radius: 1em; /* Borde redondeado */
+  margin: 0.5em 5% 0.5em 5%; /* Espaciado externo con 5% en ambos lados */
+}
+
+.received-message {
+  text-align: left;
+  background-color: #E0E0E0;
+  padding: 0.5em 1em; /* Espaciado interno */
+  border-radius: 1em; /* Borde redondeado */
+  margin: 0.5em 5% 0.5em 5%; /* Espaciado externo con 5% en ambos lados */
+}
+
+.input-field {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  margin-left: 40%;
+  height: 40px;
+}
+
+.button-text {
+  margin-left: 0px;
+  height: inherit;
+}
+
+mat-spinner{
+  margin-left: 8px;
+}
