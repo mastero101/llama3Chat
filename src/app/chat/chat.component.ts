@@ -60,7 +60,7 @@ export class ChatComponent {
     }
   }
 
-copyToClipboard(text: string) {
+  copyToClipboard(text: string) {
     const el = document.createElement('textarea');
     el.value = text;
     el.setAttribute('readonly', '');
@@ -70,5 +70,17 @@ copyToClipboard(text: string) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+  }
+
+  downloadChatHistory() {
+    const chatContent = this.messageHistory.map(message => `${message.sent ? 'Sent: ' : 'Received: '} ${message.content}`).join('\n');
+    const blob = new Blob([chatContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'chat_history.txt';
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
   }
 }

@@ -36,6 +36,19 @@
   height: 40px;
 }
 
+.download-button {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  margin-left: 38%;
+  height: 40px;
+  @media only screen and (max-width: 600px) {
+    .download-button {
+      margin-left: 35%;
+    }
+  }
+}
+
 .button-text {
   margin-left: 0px;
   height: inherit;
